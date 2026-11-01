@@ -1,6 +1,3 @@
--- SELECT *
--- FROM '../data/raw/raw_job_postings_*.parquet';
-
 SELECT
 	job_id,
 	job_title,
