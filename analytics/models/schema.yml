@@ -40,7 +40,7 @@ models:
       - name: postings
         description: "Count of job postings for the given month."
 
-  - name: job_locations
+  - name: top_locations
     description: "Model representing the count of job postings per location."
     config:
       persist_docs:
@@ -51,3 +51,19 @@ models:
         description: "Location where the job is based."
       - name: postings
         description: "Count of job postings for the given location."
+  
+  - name : monthly_summary
+    description: "Monthly summary of job postings; one row per month."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: month
+        description: "Posting month, truncated from the search date."
+      - name: total_postings
+        description: "Total count of job postings for the given month."
+      - name: remote_postings
+        description: "Count of remote job postings for the given month."
+      - name: remote_pct
+        description: "Percentage of remote job postings for the given month."
