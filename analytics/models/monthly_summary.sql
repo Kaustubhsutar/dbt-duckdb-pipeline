@@ -15,6 +15,7 @@ total_remote_postings AS (
 )
 
 SELECT
+    month,
     total_postings,
     remote_postings,
     ROUND((remote_postings/ total_postings) * 100, 1) AS remote_pct
