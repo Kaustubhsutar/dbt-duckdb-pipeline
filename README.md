@@ -17,7 +17,7 @@ A public dbt + DuckDB pipeline over ~692k real job postings, rebuilt and republi
 | --- | --- | --- |
 | **dbt pipeline** | sources → cleaned model → insight marts | [`analytics/models/`](analytics/models/) |
 | **Data tests** | `unique` / `not_null` on every mart grain | [`schema.yml`](analytics/models/schema.yml) |
-| **Hosted dbt docs** | lineage, descriptions, column tests | [Live docs site](https://github.com/Kaustubhsutar/dbt-duckdb-pipeline) |
+| **Hosted dbt docs** | lineage, descriptions, column tests | [Live docs site](https://kaustubhsutar.github.io/dbt-duckdb-pipeline-v1/) |
 | **Public CI** | build + test + publish on every push | [Actions workflow](https://github.com/Kaustubhsutar/dbt-duckdb-pipeline-v1/blob/master/.github/workflows/dbt_build.yml) |
 | **Environments** | local `dev` vs CI `prod` targets | [`ci/profiles.yml`](ci/profiles.yml) |
 | **Published warehouse** | one `ATTACH`, queryable by anyone | [Query it](#query-the-published-warehouse) |
@@ -90,7 +90,7 @@ SELECT * FROM monthly_summary;
 
 Docs are generated with `dbt docs generate` and published to GitHub Pages:
 
-**→ [lukebarousse.github.io/dbt_Analytics_Engineering_Course/project1/](https://lukebarousse.github.io/dbt_Analytics_Engineering_Course/project1/)**
+**→ [kaustubhsutar.github.io/dbt-duckdb-pipeline-v1/]( https://kaustubhsutar.github.io/dbt-duckdb-pipeline-v1/)**
 
 The site shows:
 
